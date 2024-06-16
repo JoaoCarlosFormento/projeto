@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #9575DE;
+    --cor-terciaria: #6527BE;
+    --cor-hover: #101010;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.buttons{
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-terciaria);
+    border: 2px solid var(--cor-terciaria);
+    background-color: transparent;
+    transition: .5s;
+    cursor: pointer;
+}
+#button-left:hover, #button-right:hover{
+    color: var(--cor-secundaria);
+    background-color: var(--cor-hover);
+}
+header{
+    height: 12.5vh;
+    width: 100%;
+    border-bottom: 2px solid var(--cor-terciaria);
+    background-color: var(--cor-hover);
+    position: sticky;
+    top: 0;
+    animation: aparecer 2s;
+}
+.nav-header{
+    padding: 2% 0% 0% 20%;
+    display:flex;
+    justify-content:flex-start;
+    gap: 80px;
+}
+.navigation{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+main{
+    height: 87.5vh;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    cursor: default;
+    padding: 0% 2% 0% 2%;
+}
+.division{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-section{
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    animation: opacidade 2s ease-in;
+}
+.main-title{
+    font-size: 2.25rem;
+}
+strong{
+    color: var(--cor-terciaria);
+    border: 1px solid;
+    padding: 1px;
+    border-style:dashed;
+    transition: 0.5s;
+    
+}
+strong:hover{
+    padding: 3px;
+}
+span{
+    color: rgb(189, 186, 190);
+}
+.paragraph{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+.contato{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+.texto-animado{
+    font-size: 1.5rem;
+    color: rgb(189, 186, 190);
+}
+.texto-animado span{
+    position: relative;
+}
+.texto-animado span::before{
+    content: "";
+    color: var(--cor-terciaria);
+    animation: palavras 15s infinite;
+}
+.texto-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 15px);
+    border-left: 2px solid var(--cor-terciaria);
+    right: -10px;
+    animation: cursor 1s infinite, digita 15s steps(20) infinite;
+    background-color: var(--cor-primaria);
+}
+.image{
+    width: 373px;
+    height: 438px;
+    border: 5px solid var(--cor-terciaria);
+    border-radius: 50px;
+}
+footer{
+    height: 10vh;
+    width: 100%;
+    background-color: var(--cor-terciaria);
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
+    text-align: center;
+}
+#rodape{
+    padding-top: 20px;
+}
+@keyframes aparecer {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes opacidade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes digita {
+    12.5%, 18.75%, 37.50%, 43.75%, 62.5%, 68.75%, 87.50%, 93.75%{
+        width: 0;
+    }
+    6.25%, 25%, 31.25%, 50%, 56.25%, 75%, 81.25%{
+        width: calc(100% + 15px);
+    }
+}
+@keyframes cursor {
+    0%{
+        border-left: 2px solid var(--cor-primaria);
+    }
+}
+@keyframes palavras {
+    0%, 25%{
+        content: "gostou do que viu?";
+    }
+    26%, 50%{
+        content: "se interessou?";
+    }
+    51%, 75%{
+        content: "quer entrar em contato?";
+    }
+    76%, 100%{
+        content: "entrou em contato?";
+    }
+}

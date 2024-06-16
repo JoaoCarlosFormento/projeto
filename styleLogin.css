@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #9575DE;
+    --cor-terciaria: #6527BE;
+    --cor-hover: #101010;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 5%;
+    margin-right: 30%;
+    margin-left: 30%;
+    background-color: rgb(53, 53, 53);
+    font-weight: bold;
+    color: white;
+    font-family: var(--fonte-secundaria);
+}
+#Login{
+    text-align: center;
+    font-size: 25px;
+    border: solid;
+    border-radius: 8px;
+    box-shadow: 7px 7px 4px black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-shadow: 2px 2px 2px black;
+    font-family: var(--fonte-secundaria);
+}
+input{
+    border-radius: 5px;
+    border-color: transparent;
+}
